@@ -7,3 +7,9 @@ spring:
     nacos:
       discovery:
         server-addr: 121.248.201.29:8848
+  rabbitmq:
+    host: 121.248.201.14
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /rabbitmq_exercise
