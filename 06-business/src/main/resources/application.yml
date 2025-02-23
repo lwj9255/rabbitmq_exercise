@@ -1,0 +1,9 @@
+server:
+  port: 85
+spring:
+  application:
+    name: business
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 121.248.201.29:8848

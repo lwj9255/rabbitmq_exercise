@@ -1,0 +1,9 @@
+server:
+  port: 84
+spring:
+  application:
+    name: userpoints
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 121.248.201.29:8848

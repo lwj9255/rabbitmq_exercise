@@ -1,0 +1,9 @@
+server:
+  port: 83
+spring:
+  application:
+    name: coupon
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 121.248.201.29:8848
