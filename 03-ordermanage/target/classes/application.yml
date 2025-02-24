@@ -7,3 +7,17 @@ spring:
     nacos:
       discovery:
         server-addr: 121.248.201.29:8848
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/rabbitmq_exercise
+    username: root
+    password: root
+  rabbitmq:
+    host: 121.248.201.14
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /rabbitmq_exercise
+    listener:
+      simple:
+        acknowledge-mode: manual
