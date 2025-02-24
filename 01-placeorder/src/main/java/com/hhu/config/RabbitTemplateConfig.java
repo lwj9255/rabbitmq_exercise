@@ -42,7 +42,7 @@ public class RabbitTemplateConfig {
             public void confirm(CorrelationData correlationData, boolean ack, String cause) {
                 if (correlationData == null) return;
                 String msgId = correlationData.getId();
-                if(!ack){
+                if(ack){
                     log.info("消息发送到Exchange成功!! msgId = " + msgId);
                     GlobalCache.remove(msgId);
                 }else{
@@ -58,10 +58,10 @@ public class RabbitTemplateConfig {
         return new RabbitTemplate.ReturnCallback(){
             @Override
             public void returnedMessage(Message message, int replyCode, String replyText, String exchange, String routingKey) {
-                System.out.println("消息未路由到队列");
-                System.out.println("return：消息为：" + new String(message.getBody()));
-                System.out.println("return：交换机为：" + exchange);
-                System.out.println("return：路由为：" + routingKey);
+                log.error("消息未路由到队列");
+                log.error("return：消息为：" + new String(message.getBody()));
+                log.error("return：交换机为：" + exchange);
+                log.error("return：路由为：" + routingKey);
             }
         };
     }
