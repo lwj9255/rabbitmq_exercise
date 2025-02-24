@@ -1,0 +1,9 @@
+server:
+  port: 82
+spring:
+  application:
+    name: ordermanage
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 121.248.201.29:8848

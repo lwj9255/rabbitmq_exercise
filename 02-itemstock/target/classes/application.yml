@@ -1,0 +1,9 @@
+server:
+  port: 81
+spring:
+  application:
+    name: itemstock
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 121.248.201.29:8848
